@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./global.css";
 
 function App() {
   const [formDataState, setFormDataState] = useState<{ [key: string]: string }>(
@@ -17,9 +18,11 @@ function App() {
 
     setFormDataState(formDataObj);
   };
+
   return (
     <div className="App">
-      <form onSubmit={onSubmit} action="">
+      <h2>Fill in all the fields and check the result</h2>
+      <form onSubmit={onSubmit}>
         <div>
           <label>Full Name</label>
           <input type="text" name="fullname" />
